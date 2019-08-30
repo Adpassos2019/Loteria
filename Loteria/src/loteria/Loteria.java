@@ -23,6 +23,8 @@ public class Loteria {
             while (num == -1) {
                 num = capNum(in, i);
             }
+            valores[i]= num;
+            imprimeVetor(valores);
         }
     }
 
