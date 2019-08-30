@@ -18,7 +18,7 @@ public class Loteria {
     public static int capNum(Scanner in, int i) {
         System.out.println("Digite o " + (i + 1) + "º numero");
         int num = in.nextInt();
-        if (num >= 1 && num < 60)
+        if (num >= 1 && num <= 60)
         return num;
         else
         return -1;
