@@ -1,10 +1,16 @@
 package loteria;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Loteria {
 
     public static void main(String[] args) {
+//        Random r = new Random();
+//        for (int i = 0; i < 10; i++) {
+//        System.out.println(r.nextInt(2));
+//        }
+//        System.exit(0);
         int[] valores = new int[]{0, 0, 0, 0, 0, 0};
         imprimeVetor(valores);
 //        int[] valores2;
@@ -31,6 +37,13 @@ public class Loteria {
             }
             valores[i] = num;
             imprimeVetor(valores);
+        }
+        Random r = new Random();
+        int[] bolas = new int[]{0, 0, 0, 0, 0, 0};
+        for (int i = 0; i < 6; i++) {
+                    int bola = (r.nextInt(60)+1);
+                    bolas [i] = bola;
+                    imprimeVetor(bolas);
         }
     }
 
