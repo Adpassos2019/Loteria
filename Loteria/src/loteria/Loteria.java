@@ -16,7 +16,7 @@ public class Loteria {
 //        valores2[3] = 0;
 //        valores2[4] = 0;
 //        valores2[5] = 0;
-
+//Pedir numero para usuarios
         Scanner in = new Scanner(System.in);
         System.out.println("Digite 6 numeros");
         for (int i = 0; i < 6; i++) {
@@ -33,6 +33,7 @@ public class Loteria {
             valores[i] = num;
             imprimeVetor(valores);
         }
+//Sortear os numeros aleatorios        
         Random r = new Random();
         int[] bolas = new int[]{0, 0, 0, 0, 0, 0};
         for (int i = 0; i < 6; i++) {
@@ -50,6 +51,23 @@ public class Loteria {
             bolas[i] = bola;
             imprimeVetor(bolas);
         }
+//Comparar resultados
+        int nrAcertos = 0;
+        int nrErros = 0;
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (valores[i] == bolas[j]) {
+                    nrAcertos++;
+                    break;
+                } else {
+                    nrErros++;
+                    break;
+                }
+
+            }
+
+        }
+        System.out.println("Quantidade acertos " + nrAcertos + "\nQuantidade erros " + nrErros);
     }
 
     public static int capNum(Scanner in, int i) {
